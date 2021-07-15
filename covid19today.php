@@ -11,7 +11,8 @@
 	<body>
 		<?php
 		//ถ้าใช้งานบน ssl หรือ HTTPS แล้วให้เอา @ ออกได้เลยจ้า เพราะตัว API Request SSL 
-		    @$get_data=file_get_contents('https://covid19.th-stat.com/api/open/today');
+		    @$get_data=file_get_contents('https://covid19.th-stat.com/json/covid19v2/getTodayCases.json');
+			//เปลี่ยนลิงค์ api 15072021 https://covid19.th-stat.com/json/covid19v2/getTodayCases.json
 			$covid19_th=json_decode($get_data);
 
 			//print_r ออกมาดูซะหน่อย มีอะไรบ้าง
